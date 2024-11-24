@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maclar</title>
+        <link rel="icon" href="/images/logo.ico">
+        <style>
+            body {
+                background-color: #202020;
+            }
+
+            main {
+                margin-top: 12%;
+            }
+
+            #logo {
+                width: 23%; 
+            }
+
+            .logo-div {
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                height: 200px;
+            }
+
+            .search-input {
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+            }
+
+            #search-input {
+                width: 50%;
+                height: 3vw;
+                background: #3b3b3b;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 95%;
+                padding-left: 1%;
+            }
+
+            #search-input:focus {
+                outline: none;
+                -webkit-box-shadow: 17px 2px 100px 15px rgba(93, 112, 217, 0.2);
+                -moz-box-shadow: 17px 2px 100px 15px rgba(93, 112, 217, 0.2);
+                box-shadow: 17px 2px 100px 15px rgba(93, 112, 217, 0.2);
+            }
+
+            #search-btn {
+                margin-left: 0.5%;
+                width: 3vw;
+                height: 6vh;
+                background: transparent;
+                color: #fff;
+                border: none;
+                font-size: 20px;
+            }
+
+            #search-btn:hover {
+                outline: none;
+                color: rgb(122, 96, 171);
+            }
+
+            #search-btn:focus {
+                outline: none;
+            }
+
+        </style> 
+        <script>
+            function search() {
+                var searchValue = document.getElementById('search-input').value;
+                location.href='https://www.google.com/search?q=' + searchValue;
+            }
+
+        </script>
+    </head>
+    <body>
+        <main>
+            <div class="icon">
+                <div class="logo-div">
+                    <img src="logo_light.png" id="logo">
+                </div>
+            <br>
+            </div>
+            <div class="search-input">
+                <input id="search-input" placeholder="Введите текст">
+                <button id="search-btn" onclick="search()">🔍︎</button>
+            </div>
+        </main>
+        <script src="searchJS.js"></script>
+    </body>
+</html>

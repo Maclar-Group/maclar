@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение в стиле Firefox</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #1e1e1e; /* Темный цвет панели */
+    border-bottom: 1px solid #444; /* Линия разделения */
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2a2a2a; /* Темный фон поля ввода */
+    color: #ffffff; /* Белый текст */
+}
+
+#search-input::placeholder {
+    color: #aaaaaa; /* Серый текст для плейсхолдера */
+}
+
+#submitButton {
+    padding: 10px 15px;
+    background-color: #007acc; /* Цвет кнопки */
+    border: none;
+    border-radius: 4px;
+    color: #ffffff; /* Белый текст */
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: #005f99; /* Цвет кнопки при наведении */
+}
+
+.tabs {
+    display: flex;
+    padding: 10px;
+    background-color: #1e1e1e; /* Темный цвет панели вкладок */
+    border-top: 1px solid #444; /* Линия разделения */
+}
+
+.tab {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #2a2a2a; /* Темный фон вкладки */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #444; /* Цвет вкладки при наведении */
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 95vh;
+}
+    </style>
+    <script>
+        function search() {
+                var searchValue = document.getElementById('search-input').value;
+                location.href='https://www.google.com/search?q=' + searchValue;
+            }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <input type="text" id="search-input" placeholder="Введите URL...">
+        <button onclick="search()" id="submitButton">Открыть</button>
+    </div>
+    <iframe srcdoc=>
+
+    </iframe>
+</body>
+</html>
